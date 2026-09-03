@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Klean Solutions — professional home, office and property cleaning services in Johannesburg, Sandton and surrounding areas.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#123b63">
+  <title>Klean Solutions | Professional Cleaning Services</title>
+  <style>
+    :root{
+      --ink:#17211f;
+      --muted:#64727d;
+
+      --cream:#f3f7fa;
+      --paper:#ffffff;
+
+      --green:#123b63;
+      --green-2:#1f5a8a;
+      --lime:#6ec6e8;
+
+      --line:#dce5ea;
+      --white:#ffffff;
+
+      --shadow:0 18px 50px rgba(18,59,99,.10);
+      --radius:22px;
+      --max:1180px;
+}
+    *{
+      box-sizing:border-box
+    }
+
+    html{
+      scroll-behavior:smooth
+    }
+
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.55;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none}
+    button,input,select,textarea{
+      font:inherit
+    }
+
+    img{
+      max-width:100%;
+      display:block}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    :focus-visible{
+      outline:3px solid var(--lime);
+      outline-offset:3px;
+    }
+
+    .container{
+      width:min(calc(100% - 40px),var(--max));
+      margin:auto
+    }
+
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+      color:var(--green-2);
+    }
+
+    .eyebrow:before{
+      content:"";
+      width:26px;
+      height:2px;
+      background:var(--lime)
+    }
+
+    h1,h2,h3,p{
+      margin-top:0
+    }
+
+    h1,h2,h3{
+      font-family:Georgia,"Times New Roman",serif;
+      letter-spacing:-.035em
+    }
+
+    h1{
+      font-size:clamp(48px,7vw,88px);
+      line-height:.96;
+      margin-bottom:25px;
+      max-width:820px
+    }
+
+    h2{
+      font-size:clamp(38px,5vw,62px);
+      line-height:1.02;
+      margin-bottom:18px
+    }
+
+    h3{
+      font-size:24px;
+      line-height:1.12
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      min-height:50px;
+      padding:0 21px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:800;
+      font-size:14px;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px)
+    }
+
+    .btn-dark{
+      background:var(--green);
+      color:#fff
+    }
+
+    .btn-lime{
+      background:var(--lime);
+      color:var(--ink)
+    }
+
+    .btn-outline{
+      border-color:rgba(23,63,53,.22);
+      background:transparent
+    }
+
+    .btn-white{
+      background:#fff;
+      color:var(--green)
+    }
+
+    .topbar{
+      background:var(--green);
+      color:#e9f0eb;
+      font-size:11px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      padding:9px 0;
+    }
+
+    header{
+      position:sticky;
+      top:0;z-index:100;
+      background:rgba(255,253,249,.94);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(223,226,218,.8)
+    }
+
+    .nav{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;gap:30px
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-weight:950;
+      letter-spacing:-.05em;
+      font-size:24px
+    }
+
+    .brand img{ 
+      width:250px;
+      height:100px;
+      object-fit:contain;
+      object-position:left center;
+}
+
+    .brand-mark{
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      background:var(--green);
+      display:grid;
+      place-items:center;
+      color:var(--lime);
+      font-family:Georgia,serif;
+      font-size:21px
+    }
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.footer-brand img{
+  width:300px;
+  height:52px;
+  object-fit:contain;
+  object-position:left center;
+  max-width:100%;
+}
+
+    nav{
+      display:flex;gap:27px;
+      align-items:center
+    }
+
+    nav a{
+      font-size:13px;
+      font-weight:700;
+      color:#4e5955
+    }
+
+    nav a:hover{
+      color:var(--green)
+    }
+
+    .menu{
+      display:none;
+      border:0;
+      background:none;
+      font-size:28px;
+      cursor:pointer
+    }
+
+    .hero{
+        min-height:680px;
+        background:
+            radial-gradient(circle at 85% 15%,rgba(110,198,232,.28),transparent 25%),
+            linear-gradient(135deg,#eef6fa 0%,#ffffff 60%,#e8f1f6 100%);
+        display:flex;
+        align-items:center;
+        overflow:hidden;
+}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:50px;align-items:center;
+      padding:78px 0
+    }
+
+    .hero-copy p{
+      font-size:19px;
+      max-width:590px;
+      color:#59635f;
+      margin-bottom:28px
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:27px
+    }
+
+    .ticks{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 20px;
+      color:#4e5b56;
+      font-size:13px;
+      font-weight:700
+    }
+
+    .ticks span:before{
+      content:"✓";
+      margin-right:7px;
+      color:var(--green-2);
+      font-weight:900
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height:470px
+    }
+
+    .photo{
+      position:absolute;
+      inset:15px 0 0 50px;
+      border-radius:140px 28px 28px 28px;
+      background:
+       linear-gradient(135deg,rgba(23,63,53,.05),rgba(23,63,53,.22)),
+       url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1100&q=85") center/cover;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      position:absolute;
+      left:0;bottom:24px;
+      background:var(--green);
+      color:white;
+      width:235px;
+      padding:23px;
+      border-radius:20px;
+      box-shadow:var(--shadow)
+    }
+
+    .hero-card strong{
+      display:block;
+      font:34px Georgia,serif;
+      color:var(--lime);
+      margin-bottom:3px
+    }
+
+    .hero-card small{
+      color:#dbe7df
+    }
+
+    section{
+      padding:105px 0
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;align-items:end;
+      margin-bottom:48px
+    }
+
+    .section-head>div:last-child{
+      max-width:500px;
+      color:var(--muted)
+    }
+
+    .services{
+      background:var(--green);
+      color:white
+    }
+
+    .services .eyebrow{
+      color:var(--lime)
+    }
+
+    .services .section-head>div:last-child{
+      color:#cbd8d2
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px
+    }
+
+    .service{
+      min-height:300px;
+      padding:30px;
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:20px;
+      background:rgba(255,255,255,.045);
+      display:flex;flex-direction:column;
+      transition:.25s ease
+    }
+
+    .service:hover{
+      background:rgba(255,255,255,.09);
+      transform:translateY(-4px)
+    }
+
+    .number{
+      font-size:12px;
+      font-weight:900;
+      color:var(--lime);
+      letter-spacing:.1em;
+      margin-bottom:auto
+    }
+
+    .service p{
+      color:#cbd6d1;
+      font-size:14px
+    }
+
+    .service .audience{
+      margin-top:auto;
+      font-size:12px;
+      font-weight:800;
+      color:#f0f4f1
+    }
+
+    .service .quote{
+      margin-top:14px;
+      color:var(--lime);
+      font-size:13px;
+      font-weight:800
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;gap:80px
+    }
+
+    .why-intro p{
+      color:var(--muted);
+      font-size:17px;
+      max-width:420px
+    }
+
+    .reasons{
+      border-top:1px solid var(--line)
+    }
+
+    .reason{
+      display:grid;
+      grid-template-columns:70px 1fr;
+      gap:25px;
+      padding:30px 0;
+      border-bottom:1px solid var(--line)
+    }
+
+    .reason-num{
+      font-weight:900;
+      color:var(--green-2);
+      font-size:13px
+    }
+
+    .reason h3{
+      margin-bottom:8px;
+      text-transform:uppercase;
+      font-size:23px
+    }
+
+    .reason p{
+      color:var(--muted);
+      margin:0;
+      max-width:700px
+    }
+
+    .how{
+      background:var(--cream)
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:15px
+    }
+
+    .step{
+      padding:28px;
+      background:var(--paper);
+      border-radius:18px;
+      min-height:265px
+    }
+
+    .step-num{
+      font-size:12px;
+      font-weight:900;
+      color:var(--green-2);
+      margin-bottom:60px
+    }
+
+    .step p{
+      font-size:14px;
+      color:var(--muted)
+    }
+
+    .areas{
+      background:#fff
+    }
+
+    .area-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center
+    }
+
+    .area-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px
+    }
+    
+    .area{
+      padding:13px 17px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-weight:750;
+      font-size:14px
+    }
+
+    .area-art{
+      min-height:360px;
+      border-radius:30px;
+      background:
+      linear-gradient(140deg,rgba(23,63,53,.82),rgba(23,63,53,.35)),
+      url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85") center/cover;
+      display:flex;
+      align-items:end;
+      padding:30px;
+      color:white
+    }
+
+    .area-art p{
+      max-width:350px;
+      margin:0;
+      font-size:15px
+    }
+
+    .testimonials{
+      background:var(--cream)
+    }
+
+    .testimonial-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px
+    }
+
+    .testimonial{
+      padding:30px;
+      background:var(--paper);
+      border-radius:18px;
+      min-height:210px;
+      display:flex;
+      flex-direction:column
+    }
+
+    .quote-mark{
+      font:50px Georgia,serif;
+      color:var(--green);
+      line-height:.7;
+      margin-bottom:20px
+    }
+
+    .testimonial p{
+      font:15px Georgia,serif;
+      line-height:1.6
+    }
+
+    .client{
+      margin-top:auto;
+      font-size:11px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted)
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:.75fr 1.25fr;
+      gap:90px
+    }
+
+    .faq-intro p{
+      color:var(--muted)
+    }
+
+    details{
+      border-top:1px solid var(--line);
+      padding:22px 0
+    }
+
+    details:last-child{
+      border-bottom:1px solid var(--line)
+    }
+
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      padding-right:35px;
+      position:relative
+    }
+
+    summary::-webkit-details-marker{
+      display:none
+    }
+
+    summary:after{
+      content:"+";
+      position:absolute;
+      right:0;
+      font-size:23px;
+      font-weight:400
+    }
+
+    details[open] summary:after{
+      content:"−"
+    }
+
+    details p{
+      margin:14px 0 0;color:var(--muted);
+      font-size:14px;max-width:720px
+    }
+
+    .contact{
+      background:var(--green);color:white
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:80px;
+      align-items:start
+    }
+
+    .contact .eyebrow{
+      color:var(--lime)
+    }
+
+    .contact-copy p{
+      color:#cbd8d2;
+      font-size:17px;
+      max-width:470px
+    }
+
+    .contact-card{
+      background:#fff;
+      color:var(--ink);
+      padding:30px;
+      border-radius:24px
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px
+    }
+
+    label{font-size:12px;font-weight:800;display:block;margin-bottom:7px}
+    input,select,textarea{width:100%;border:1px solid #dce0d8;border-radius:11px;padding:13px 14px;background:#fff;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--green-2);box-shadow:0 0 0 3px rgba(34,89,75,.08)}
+    textarea{min-height:125px;resize:vertical}
+    .field-full{grid-column:1/-1}
+    .form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:16px}
+    .form-note{font-size:11px;color:var(--muted)}
+    
+
+    .about-stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+      margin-top:38px;
+    }
+
+    .stat-card{
+      padding:26px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:var(--paper);
+    }
+
+    .stat-card strong{
+      display:block;
+      font:38px Georgia,serif;
+      color:var(--green);
+      margin-bottom:6px;
+    }
+
+    .stat-card span{
+      font-size:12px;
+      font-weight:800;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .business-section{
+      background:var(--green);
+      color:#fff;
+    }
+
+    .business-section .eyebrow{
+      color:var(--lime);
+    }
+
+    .business-section .section-head>div:last-child{
+      color:#cbd8d2;
+    }
+
+    .business-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .business-card{
+      padding:28px;
+      min-height:240px;
+      border:1px solid rgba(255,255,255,.14);
+      border-radius:20px;
+      background:rgba(255,255,255,.045);
+      transition:.25s ease;
+    }
+
+    .business-card:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,.09);
+    }
+
+    .business-card span{
+      font-size:12px;
+      font-weight:900;
+      color:var(--lime);
+    }
+
+    .business-card h3{
+      margin-top:60px;
+      margin-bottom:10px;
+    }
+
+    .business-card p{
+      color:#cbd6d1;
+      font-size:14px;
+    }
+
+    .final-cta{
+      padding:75px 0;
+      background:linear-gradient(135deg,#123b63,#1f5a8a);
+      color:#fff;
+    }
+
+    .final-cta .eyebrow{
+      color:var(--lime);
+    }
+
+    .final-cta h2{
+      margin-bottom:10px;
+    }
+
+    .final-cta p{
+      color:#d8e5ec;
+      margin-bottom:0;
+      max-width:580px;
+    }
+
+    .final-cta-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:40px;
+    }
+
+    footer{
+      background:#0B2945;
+      color:#D6E4EC;
+      padding:55px 0 25px;
+    }
+    
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.4fr 1fr 1.3fr;
+      gap:70px;
+      align-items:start;
+      padding-bottom:60px;
+    }
+
+    /* Logo / About column */
+    .footer-brand{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+      margin-bottom:18px;
+    }
+
+    .footer-brand img{
+      width:250px;
+      height:100px;
+      max-width:100%;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .footer-grid > div:first-child p{
+      max-width:300px;
+      margin-bottom:14px;
+}
+
+/* Headings */
+footer h4{
+  color:#fff;
+  margin:0 0 18px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+}
+
+/* Lists */
+footer ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:12px;
+  font-size:14px;
+}
+
+footer ul li{
+  line-height:1.4;
+}
+
+footer ul li a:hover{
+  color:#fff;
+}
+
+/* WhatsApp button */
+.footer-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:24px;
+  min-height:36px;
+  padding:0 18px;
+  border-radius:10px;
+  background:#fff;
+  color:var(--green);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+
+    .float-wa{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:90;
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#25d366;
+      color:white;
+      display:grid;
+      place-items:center;
+      box-shadow:0 12px 30px rgba(0,0,0,.22);
+      font-weight:950
+    }
+
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:24px;
+      transform:translate(-50%,120px);
+      background:var(--green);
+      color:white;
+      padding:14px 20px;
+      border-radius:12px;
+      z-index:200;
+      transition:.3s ease;
+      box-shadow:var(--shadow);
+      font-size:13px
+    }
+
+    .toast.show{
+      transform:translate(-50%,0)
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.12);
+      padding-top:22px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      font-size:12px;
+      color:#9fb2bf;
+    }
+
+    @media(max-width:900px){
+      
+      nav{
+        display:flex;
+        display:flex;
+        gap:20px;
+        align-items:center;
+      }
+
+      nav.open{
+        display:flex
+      }
+        
+      .menu{
+        display:block
+      }
+      .hero-grid,.why-grid,.area-wrap,.faq-grid,.contact-grid{
+        grid-template-columns:1fr
+      }
+
+      .hero{
+        min-height:auto
+      }
+      
+      .hero-grid{
+        padding:60px 0
+      }
+
+      .hero-visual{
+        min-height:420px
+      }
+
+      .service-grid{
+        grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .testimonial-grid{grid-template-columns:1fr}
+
+      .about-stats{grid-template-columns:repeat(2,1fr)}
+      .business-grid{grid-template-columns:repeat(2,1fr)}
+      .final-cta-inner{align-items:flex-start;flex-direction:column;gap:25px}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .contact-grid{gap:40px}
+    }
+    @media(max-width:620px){
+        .brand img,
+        .footer-brand img{
+          width:125px;
+          height:44px;
+        }
+      }
+      .topbar{font-size:9px;text-align:center}
+      .nav{height:70px}.brand{font-size:20px}.brand-mark{width:34px;height:34px}
+      nav{top:70px}
+      h1{font-size:48px}
+      section{padding:75px 0}
+      .section-head{display:block;margin-bottom:34px}
+      .section-head>div:last-child{margin-top:18px}
+      .service-grid,.steps{grid-template-columns:1fr}
+      .service{min-height:245px}
+      .hero-visual{min-height:360px}.photo{inset:0 0 20px 30px;border-radius:100px 22px 22px 22px}
+      .hero-card{width:205px;padding:18px;bottom:0}
+      .why-grid{gap:40px}.reason{grid-template-columns:45px 1fr;gap:12px}
+      .area-wrap{gap:30px}.area-art{min-height:300px}
+      .form-grid{grid-template-columns:1fr}.field-full{grid-column:auto}
+      .form-actions{display:block}.form-note{margin-top:12px}
+
+      .about-stats,.business-grid{grid-template-columns:1fr}
+      .stat-card{padding:22px}
+      .business-card{min-height:210px}
+      .business-card h3{margin-top:45px}
+      .footer-grid{grid-template-columns:1fr}
+      .footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">JOHANNESBURG · SANDTON · SOUTH AFRICA</div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Klean Solutions home">
+  <img src="Klean.logo.png" alt="Klean Solutions Logo">
+</a>
+      <button 
+      type="button" 
+      class="menu" 
+      id="menuBtn" 
+      aria-label="Open menu" 
+      aria-controls="nav" 
+      aria-expanded="false">
+        ☰
+      </button>
+      <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-dark nav-quote" href="#contact">Get a Free Quote</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Professional Cleaning</span>
+          <h1>We don't just clean. We create spaces you'll love.</h1>
+          <p>Reliable, professional cleaning for homes, offices and properties across Johannesburg and surrounding areas.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#contact">Get a Free Quote</a>
+            <a class="btn btn-outline" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20free%20cleaning%20quote." target="_blank" rel="noopener">WhatsApp Us ↗</a>
+          </div>
+          <div class="ticks">
+            <span>Vetted & trained cleaners</span>
+            <span>Agreed checklist</span>
+            <span>Free quotes</span>
+            <span>Once-off or regular</span>
+            <span>Own equipment</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Professional cleaning">
+          <div class="photo"></div>
+          <div class="hero-card">
+            <strong>6+</strong>
+            <small>Cleaning services for homes, offices and properties.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Services</span>
+            <h2>What we take care of</h2>
+          </div>
+          <div>Once-off or on a regular schedule, with the checklist tailored to your property.</div>
+        </div>
+        <div class="service-grid">
+          <article class="service"><div class="number">01</div><div><h3>Residential Cleaning</h3><p>Regular or once-off cleaning that keeps your home fresh, tidy and comfortable.</p></div><div class="audience">Families, couples and busy professionals</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20Residential%20Cleaning%20quote.">Get a quote →</a></article>
+          <article class="service"><div class="number">02</div><div><h3>Office Cleaning</h3><p>After-hours or daytime cleaning that keeps your workplace presentable every day.</p></div><div class="audience">Offices, shops and small businesses</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20an%20Office%20Cleaning%20quote.">Get a quote →</a></article>
+          <article class="service"><div class="number">03</div><div><h3>Deep Cleaning</h3><p>A thorough top-to-bottom clean for spring cleans or spaces that need extra attention.</p></div><div class="audience">Homes that haven't been cleaned in a while</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20Deep%20Cleaning%20quote.">Get a quote →</a></article>
+          <article class="service"><div class="number">04</div><div><h3>Move-In / Move-Out Cleaning</h3><p>Hand a property over spotless, or move into one that's genuinely ready for you.</p></div><div class="audience">Tenants, landlords and estate agents</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20Move-In%20or%20Move-Out%20Cleaning%20quote.">Get a quote →</a></article>
+          <article class="service"><div class="number">05</div><div><h3>Airbnb / Guesthouse Cleaning</h3><p>Fast, checklist-driven turnovers between guests so your listing stays guest-ready.</p></div><div class="audience">Airbnb hosts and guesthouse owners</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20an%20Airbnb%20or%20Guesthouse%20Cleaning%20quote.">Get a quote →</a></article>
+          <article class="service"><div class="number">06</div><div><h3>Post-Construction Cleaning</h3><p>Builder's dust and residue removed so the space can actually be used.</p></div><div class="audience">Homeowners and contractors</div><a class="quote" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20Post-Construction%20Cleaning%20quote.">Get a quote →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="reveal">
+      <div class="container why-grid">
+        <div class="why-intro">
+          <span class="eyebrow">Why Klean Solutions</span>
+          <h2>Three things we refuse to compromise on</h2>
+          <p>Good cleaning is more than making a room look tidy. It is the detail, reliability and professionalism behind every visit.</p>
+          <a class="btn btn-dark" href="#contact">Book a Cleaning</a>
+        </div>
+        <div class="reasons">
+          <article class="reason"><div class="reason-num">01</div><div><h3>Detail Matters.</h3><p>Skirtings, handles, corners and tracks — the parts most people skip are the parts you notice. We work to an agreed checklist so nothing is left to memory.</p></div></article>
+          <article class="reason"><div class="reason-num">02</div><div><h3>Reliability Matters.</h3><p>A confirmed booking, an arrival window we keep, and a message the moment anything changes. Consistency is the whole service.</p></div></article>
+          <article class="reason"><div class="reason-num">03</div><div><h3>Professionalism Matters.</h3><p>Vetted, trained cleaners who treat your home or workplace with respect, arrive equipped and leave a clear record of the work done.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="how reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">How It Works</span><h2>Four steps, no long forms</h2></div>
+          <div>From your first message to a space that feels genuinely finished.</div>
+        </div>
+        <div class="steps">
+          <article class="step"><div class="step-num">01</div><h3>Tell Us What You Need</h3><p>Send a WhatsApp or fill in the quote form with the size of the space, rooms involved and how often you'd like us.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Receive Your Quote</h3><p>We come back with a clear, itemised price and an agreed checklist — no obligation and no surprise charges later.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>Choose Your Date</h3><p>Pick a weekday, Saturday or after-hours slot. Once-off or regular — whichever suits your space.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>We Take Care of the Cleaning</h3><p>Our team arrives on time and equipped, works room by room, and if anything isn't right we return within 24 hours.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="areas reveal">
+      <div class="container area-wrap">
+        <div>
+          <span class="eyebrow">Areas We Serve</span>
+          <h2>Where you'll find us</h2>
+          <p style="color:var(--muted);max-width:510px">Nearby but not on the list? Ask us — we'll tell you honestly whether we can reach you.</p>
+          <div class="area-list">
+            <span class="area">Johannesburg</span><span class="area">Sandton</span><span class="area">Randburg</span><span class="area">Midrand</span><span class="area">Roodepoort</span><span class="area">Pretoria East</span><span class="area">Centurion</span><span class="area">Fourways</span>
+          </div>
+        </div>
+        <div class="area-art"><p>Reliable home & office cleaning across Johannesburg and surrounding areas.</p></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="how reveal">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Pricing</span>
+            <h2>Clear quotes, tailored to your space</h2>
+          </div>
+          <div>We don't use a one-size-fits-all price because every property, cleaning type and frequency is different.</div>
+        </div>
+        <div class="service-grid">
+          <article class="service" style="background:var(--paper);color:var(--ink);border:1px solid var(--line)">
+            <div class="number">01</div>
+            <h3>Residential</h3>
+            <p style="color:var(--muted)">Pricing is based on property size, rooms, bathrooms, cleaning type and frequency.</p>
+            <div class="quote" style="color:var(--green-2)">Free, no-obligation quote →</div>
+          </article>
+          <article class="service" style="background:var(--paper);color:var(--ink);border:1px solid var(--line)">
+            <div class="number">02</div>
+            <h3>Business & Office</h3>
+            <p style="color:var(--muted)">Daytime, after-hours or recurring office cleaning is quoted according to your premises and schedule.</p>
+            <div class="quote" style="color:var(--green-2)">Request an office quote →</div>
+          </article>
+          <article class="service" style="background:var(--paper);color:var(--ink);border:1px solid var(--line)">
+            <div class="number">03</div>
+            <h3>Specialist Cleaning</h3>
+            <p style="color:var(--muted)">Deep, move-in/out, Airbnb/guesthouse and post-construction cleaning is priced according to the work required.</p>
+            <div class="quote" style="color:var(--green-2)">Get a tailored quote →</div>
+          </article>
+        </div>
+        <div style="margin-top:28px;padding:20px 24px;background:var(--green);color:white;border-radius:18px;text-align:center">
+          <strong>Pricing depends on the size of the property, type of cleaning required, number of rooms and frequency.</strong>
+          <div style="margin-top:6px;color:#cbd8d2;font-size:14px">Contact Klean Solutions for a free, no-obligation quote.</div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="business-section reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">For Businesses</span><h2>Professional cleaning that keeps your business ready.</h2></div>
+          <div>From everyday office cleaning to guest-ready turnovers, we tailor the service to your premises, schedule and checklist.</div>
+        </div>
+        <div class="business-grid">
+          <article class="business-card"><span>01</span><h3>Offices</h3><p>Keep your workplace clean, presentable and ready for staff and visitors.</p></article>
+          <article class="business-card"><span>02</span><h3>Airbnb & Guesthouses</h3><p>Reliable turnovers between guests with a clear, repeatable checklist.</p></article>
+          <article class="business-card"><span>03</span><h3>Property Managers</h3><p>Cleaning support for properties between tenants, viewings or handovers.</p></article>
+          <article class="business-card"><span>04</span><h3>Commercial Spaces</h3><p>Professional cleaning for customer-facing environments and small businesses.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials reveal">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Testimonials</span><h2>What clients say</h2></div>
+          <div>We're newly established, so these spaces are reserved for real client feedback — we'd rather show you nothing than invent something.</div>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial"><div class="quote-mark">“</div><p>Reserved for a real client review. We publish feedback only once a client has actually shared it with us.</p><div class="client">Client name · Suburb · Service</div></article>
+          <article class="testimonial"><div class="quote-mark">“</div><p>Reserved for a real client review. We publish feedback only once a client has actually shared it with us.</p><div class="client">Client name · Suburb · Service</div></article>
+          <article class="testimonial"><div class="quote-mark">“</div><p>Reserved for a real client review. We publish feedback only once a client has actually shared it with us.</p><div class="client">Client name · Suburb · Service</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">Our Story — Klean Solutions
+</span><h2>Cleaning built around your space.</h2></div>
+          <div>Founded in 2026, Klean Solutions began with a people-driven mission: to create cleaner, healthier, and more welcoming
+          spaces while delivering reliable, professional service that businesses and individuals can trust.
+          
+          We believe that cleanliness is more than just appearance,it creates an environment where people can work better, feel
+          comfortable, and thrive. From the beginning, our vision has been to combine quality workmanship, attention to detail,
+          and a genuine commitment to our clients.
+          
+          As we grow, Klean Solutions remains focused on building lasting relationships, understanding the unique needs of every
+          client, and setting a higher standard for professional cleaning solutions.</div>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card"><strong>2026</strong><span>Founded</span></div>
+          <div class="stat-card"><strong>6+</strong><span>Cleaning services</span></div>
+          <div class="stat-card"><strong>8</strong><span>Areas currently served</span></div>
+          <div class="stat-card"><strong>100%</strong><span>Professional focus</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container faq-grid">
+        <div class="faq-intro"><span class="eyebrow">FAQ</span><h2>Questions we're often asked</h2><p>Still unsure? Send us a message and we'll help you figure out what service fits your space.</p><a class="btn btn-outline" target="_blank" rel="noopener" href="https://wa.me/27768353981">Ask on WhatsApp</a></div>
+        <div>
+          <details><summary>Do you bring your own equipment and products?</summary><p>Yes. Our cleaning team arrives equipped with the necessary cleaning equipment and supplies.</p></details>
+          <details><summary>How much does a clean cost?</summary><p>Pricing depends on the size of the property, type of cleaning required, number of rooms and frequency. Contact us for a free, no-obligation quote.</p></details>
+          <details><summary>Do I need to be home during the clean?</summary><p>Not necessarily. We can discuss access arrangements with you before the booking.</p></details>
+          <details><summary>Which areas do you cover?</summary><p>We currently serve Johannesburg, Sandton, Randburg, Midrand, Roodepoort, Pretoria East, Centurion and Fourways.</p></details>
+          <details><summary>How do I pay?</summary><p>Payment arrangements can be confirmed when your booking is made.</p></details>
+          <details><summary>What if I'm not happy with something?</summary><p>Please let us know. Our service commitment includes addressing issues promptly.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Get Started</span>
+          <h2>Ready for a space that feels clean?</h2>
+          <p>Tell us about your home or premises and we'll come back with a clear, no-obligation quote.</p>
+          <a class="btn btn-lime" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20free%20cleaning%20quote.">WhatsApp Us ↗</a>
+        </div>
+        <div class="contact-card">
+          <form id="quoteForm">
+            <div class="form-grid">
+              <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required placeholder="Your name"></div>
+              <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your phone number"></div>
+              <div><label for="property">Property Type</label><select id="property" name="property" required><option value="">Select property type</option><option>House</option><option>Apartment</option><option>Office</option><option>Airbnb / Guesthouse</option><option>Commercial Property</option></select></div>
+              <div><label for="frequency">Frequency</label><select id="frequency" name="frequency"><option value="">Select frequency</option><option>Once-off</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select></div>
+              <div class="field-full"><label for="service">Service</label><select id="service" name="service" required><option value="">Select a service</option><option>Residential Cleaning</option><option>Office Cleaning</option><option>Deep Cleaning</option><option>Move-In / Move-Out Cleaning</option><option>Airbnb / Guesthouse Cleaning</option><option>Post-Construction Cleaning</option></select></div>
+              <div><label for="date">Preferred Date</label><input id="date" name="date" type="date"></div>
+              <div><label for="size">Approx. Property Size</label><input id="size" name="size" placeholder="e.g. 2-bedroom / 100 m²"></div>
+              <div class="field-full"><label for="message">Tell us about the space</label><textarea id="message" name="message" placeholder="Rooms, bathrooms, preferred time, special requirements, or anything else we should know."></textarea></div>
+            </div>
+            <div class="form-actions"><button class="btn btn-dark" type="submit">Request My Free Quote</button><span class="form-note">No obligation · We respond with a clear quote.</span></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <span class="eyebrow">Ready to Get Started?</span>
+          <h2>Let's get your space looking its best.</h2>
+          <p>Tell us what you need and we'll provide a clear, no-obligation quote.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-lime" href="#contact">Get My Free Quote</a>
+          <a class="btn btn-white" target="_blank" rel="noopener" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20free%20cleaning%20quote.">WhatsApp Us ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+    
+      <div class="footer-grid">
+    
+        <!-- LOGO + DESCRIPTION -->
+        <div>
+          <div class="footer-brand">
+            <img src="Klean.logo.png" alt="Klean Solutions Logo">
+          </div>
+    
+          <p>
+            Reliable home & office cleaning in South Africa.
+          </p>
+          <p>
+            Serving Johannesburg, Sandton, Randburg, Midrand,
+            Roodepoort, Pretoria East, Centurion and Fourways.
+          </p>
+        </div>
+    
+        <!-- PAGES -->
+        <div>
+          <h4>Pages</h4>
+    
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- GET IN TOUCH -->
+        <div>
+          <h4>Get In Touch</h4>
+    
+          <ul>
+            <li>
+              <a href="tel:+27768353981">
+                ☎ &nbsp; +27 76 835 3981
+              </a>
+            </li>
+    
+            <li>
+              <a href="mailto:katlehokatleho2022@gmail.com">
+                ✉ &nbsp; katlehokatleho2022@gmail.com
+              </a>
+            </li>
+    
+            <li>
+              ⌖ &nbsp; Your street address, City, South Africa
+            </li>
+    
+            <li>
+              ◷ &nbsp; Mon – Fri: 07:00 – 18:00
+            </li>
+    
+            <li>
+              &nbsp;&nbsp;&nbsp;&nbsp; Sat: 08:00 – 14:00
+            </li>
+          </ul>
+    
+          <a class="footer-whatsapp" target="_blank" rel="noopener"
+            href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20free%20cleaning%20quote.">
+            WhatsApp Us
+          </a>
+        </div>
+    
+      </div>
+    
+      <div class="footer-bottom">
+        <span>© 2026 Klean Solutions. All rights reserved.</span>
+        <span>Professional cleaning services</span>
+      </div>
+    
+    </div>
+  </footer>
+  
+
+
+  <a class="float-wa" href="https://wa.me/27768353981?text=Hi%20Klean%20Solutions%2C%20I%27d%20like%20a%20free%20cleaning%20quote." target="_blank" rel="noopener" aria-label="WhatsApp Klean Solutions">WA</a>
+  <div class="toast" id="toast">Opening WhatsApp with your quote request…</div>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+      });
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuBtn.textContent = isOpen ? '×' : '☰';
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.textContent = '☰';
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open menu');
+      });
+    });
+
+    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const property = document.getElementById('property').value;
+      const frequency = document.getElementById('frequency').value;
+      const date = document.getElementById('date').value;
+      const size = document.getElementById('size').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const text =
+        `Hi Klean Solutions, I'd like a free quote.%0A%0A` +
+        `Name: ${encodeURIComponent(name)}%0A` +
+        `Phone: ${encodeURIComponent(phone)}%0A` +
+        `Property: ${encodeURIComponent(property)}%0A` +
+        `Service: ${encodeURIComponent(service)}%0A` +
+        `Frequency: ${encodeURIComponent(frequency || 'Not specified')}%0A` +
+        `Preferred date: ${encodeURIComponent(date || 'Not specified')}%0A` +
+        `Property size: ${encodeURIComponent(size || 'Not provided')}%0A` +
+        `Details: ${encodeURIComponent(message || 'Not provided')}`;
+
+      document.getElementById('toast').classList.add('show');
+      setTimeout(() => {
+        document.getElementById('toast').classList.remove('show');
+        window.open(`https://wa.me/27768353981?text=${text}`, '_blank', 'noopener');
+      }, 450);
+    });
+  </script>
+</body>
+</html>
